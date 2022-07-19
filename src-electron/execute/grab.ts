@@ -68,7 +68,7 @@ const DouYin = {
       DouYin.OpenUrl({
         url: filter.video_detail,
         name: 'childWindow',
-        isImage: false
+        isImage: true
       })
       return event.returnValue = IpcSuccess(<PageData>{list: [], rowsNumber: 1})
     }
@@ -78,7 +78,7 @@ const DouYin = {
         DouYin.OpenUrl({
           url: filter.video_detail,
           name: 'childWindow',
-          isImage: false
+          isImage: true
         })
       }
       if (res.data !== true) return event.returnValue = IpcSuccess(<PageData>{list: [], rowsNumber: 1})
