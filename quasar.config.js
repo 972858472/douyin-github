@@ -192,7 +192,6 @@ module.exports = configure(function (/* ctx */) {
         // Windows only
         // win32metadata: { ... }
       },
-
       builder: {
         // https://www.electron.build/configuration/configuration
 
@@ -205,7 +204,12 @@ module.exports = configure(function (/* ctx */) {
           include: 'installer.nsh',
           oneClick: false,
           allowToChangeInstallationDirectory: true
-        }
+        },
+        publish: [{
+          provider: 'github',
+          owner: '972858472',
+          repo: 'douyin-github'
+        }],
       }
     },
 

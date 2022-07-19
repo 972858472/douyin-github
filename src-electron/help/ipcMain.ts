@@ -4,6 +4,8 @@ import IpcApi from './ipcApi';
 import {IpcFail} from './common';
 
 
+import {autoUpdater} from 'electron-updater'
+
 global.DB = sqlite
 
 ipcMain.on('DouYin', function (event, ...args) {
@@ -23,7 +25,10 @@ ipcMain.on('DouYin', function (event, ...args) {
   }
 })
 
-
+const log = require('electron-log')
+log.transports.file.level = 'debug'
+autoUpdater.logger = log
+autoUpdater.checkForUpdatesAndNotify().then()
 
 
 

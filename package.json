@@ -1,6 +1,6 @@
 {
   "name": "DouYin-Script",
-  "version": "2.2.4",
+  "version": "2.2.10",
   "description": "一个抖音营销辅助工具",
   "productName": "抖音营销工具",
   "author": "zayn <*@qq.com>",
@@ -8,13 +8,17 @@
   "scripts": {
     "lint": "eslint --ext .js,.ts,.vue ./",
     "format": "prettier --write \"**/*.{js,ts,vue,scss,html,md,json}\" --ignore-path .gitignore",
-    "test": "echo \"No test specified\" && exit 0"
+    "test": "echo \"No test specified\" && exit 0",
+    "publish": "electron-builder --win -p always"
   },
+  "main": "./src-electron/electron-main.js",
   "dependencies": {
     "@electron/remote": "^2.0.8",
     "@quasar/extras": "^1.0.0",
     "axios": "^0.21.1",
+    "electron-log": "^4.4.8",
     "electron-store": "^8.0.1",
+    "electron-updater": "^5.0.5",
     "nedb": "^1.8.0",
     "pinia": "^2.0.11",
     "pinia-plugin-persistedstate": "^1.6.1",
